@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Credits</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background: radial-gradient(circle, #1a1a2e 0%, #0f0c1b 100%);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    font-family:'Press Start 2P', cursive;
+}
+
+.credits-container{
+    text-align:center;
+    background:rgba(255,255,255,0.03);
+    padding:50px 80px;
+    border-radius:15px;
+    border:2px solid rgba(255,255,255,0.1);
+    box-shadow:0 0 30px rgba(0,0,0,0.7);
+}
+
+.credits-title{
+    color:#ffffff;
+    font-size:2.5rem;
+    margin-bottom:40px;
+    text-shadow:0 0 15px rgba(0,212,255,0.6);
+}
+
+.credit-line{
+    color:#8e9bb0;
+    margin:25px 0;
+    font-size:0.9rem;
+    line-height:2;
+}
+
+.credit-line span{
+    color:#ffd700;
+}
+
+.thank-you{
+    color:#00d4ff;
+    margin-top:40px;
+    animation:blink 1.5s infinite;
+}
+
+@keyframes blink{
+    50%{
+        opacity:.4;
+    }
+}
+
+.nav-buttons{
+    margin-top:40px;
+}
+
+.nav-buttons a{
+    text-decoration:none;
+}
+
+.menu-btn{
+    background:none;
+    border:none;
+    color:#8e9bb0;
+    font-size:1rem;
+    font-family:'Press Start 2P', cursive;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.menu-btn:hover{
+    color:#ffd700;
+    transform:scale(1.1);
+}
+
+.arrow{
+    opacity:0;
+    color:#ffd700;
+    transition:0.3s;
+}
+
+.menu-btn:hover .arrow{
+    opacity:1;
+}
+</style>
+</head>
+<body>
+
+<div class="credits-container">
+
+    <h1 class="credits-title">CREDITS</h1>
+
+    <div class="credit-line">
+        <span>Developer</span><br><br>
+        Earl Matthew Vistal
+    </div>
+
+    <div class="credit-line">
+        <span>Skill</span><br><br>
+        Improvising, Pattern Recognition
+    </div>
+
+    <div class="credit-line">
+        <span>Special Thanks</span><br><br>
+        Friends, Family, Teachers and AI
+    </div>
+
+    <div class="thank-you">
+        ★ THANKS FOR VIEWING ★
+    </div>
+
+    <div class="nav-buttons">
+        <a href="title page.html">
+            <button class="menu-btn">
+                <span class="arrow">></span>
+                BACK
+                <span class="arrow"><</span>
+            </button>
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>
+```

@@ -1,0 +1,162 @@
+* {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #1a120b;
+            background-image: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url('https://www.transparenttextures.com/patterns/dark-wood.png');
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            font-family: 'Georgia', serif;
+        }
+
+        /* Container that holds the wooden rollers and paper */
+        .scroll-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 500px;
+            width: 700px;
+        }
+
+        /* The Rollers (Wooden Handles) */
+        .roller {
+            width: 30px;
+            height: 540px;
+            background: linear-gradient(to right, #3d2314, #663a22, #3d2314);
+            border-radius: 5px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.7);
+            position: absolute;
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 0;
+        }
+
+        /* Golden tips for the pirate aesthetic */
+        .roller::before, .roller::after {
+            content: '';
+            width: 40px;
+            height: 20px;
+            background: radial-gradient(circle, #ffd700, #b8860b);
+            border: 2px solid #554000;
+            border-radius: 3px;
+        }
+
+        .roller-left {
+            left: 50%;
+            transform: translateX(-50%);
+            animation: moveLeft 1.5s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+        }
+
+        .roller-right {
+            right: 50%;
+            transform: translateX(50%);
+            animation: moveRight 1.5s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+        }
+
+        /* The Parchment Paper */
+        .scroll-paper {
+            width: 0%;
+            height: 480px;
+            background-color: #f2e3c6;
+            background-image: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.4), transparent), 
+                              url('https://www.transparenttextures.com/patterns/parchment.png');
+            box-shadow: inset 0 0 40px #9c7c4c, 0 10px 30px rgba(0,0,0,0.5);
+            position: relative;
+            z-index: 2;
+            overflow: hidden;
+            border-top: 4px solid #4a3319;
+            border-bottom: 4px solid #4a3319;
+            
+            /* Unrolling animation */
+            animation: unroll 1.5s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+        }
+
+        /* Burned jagged edges effect using clip-path */
+        .scroll-paper::before, .scroll-paper::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 15px;
+            background: #2b1a09; /* Dark burned edge color */
+            z-index: 4;
+        }
+        .scroll-paper::before { left: 0; clip-path: polygon(0% 0%, 100% 0%, 30% 8%, 85% 15%, 10% 25%, 70% 35%, 20% 50%, 90% 63%, 40% 75%, 80% 85%, 15% 93%, 100% 100%, 0% 100%); }
+        .scroll-paper::after { right: 0; clip-path: polygon(100% 0%, 0% 0%, 70% 8%, 15% 15%, 90% 25%, 30% 35%, 80% 50%, 10% 63%, 60% 75%, 20% 85%, 85% 93%, 0% 100%, 100% 100%); }
+
+        /* Content inside the scroll */
+        .scroll-content {
+            padding: 40px 60px;
+            width: 640px; /* Locked width to prevent text squishing during animation */
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: #36220f;
+            opacity: 0;
+            animation: fadeInContent 0.6s ease-out 1.2s forwards;
+        }
+
+        .scroll-content h1 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            color: #8b0000;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+
+        .jolly-roger {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.3));
+        }
+
+        .scroll-content p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            font-style: italic;
+            margin-bottom: 25px;
+        }
+
+        .bounty-amount {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #b8860b;
+            border: 3px dashed #8b0000;
+            display: inline-block;
+            padding: 10px 20px;
+            transform: rotate(-3deg);
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* --- ANIMATIONS --- */
+        @keyframes unroll {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+
+        @keyframes moveLeft {
+            0% { left: 50%; transform: translateX(-50%); }
+            100% { left: 0%; transform: translateX(-50%); }
+        }
+
+        @keyframes moveRight {
+            0% { right: 50%; transform: translateX(50%); }
+            100% { right: 0%; transform: translateX(50%); }
+        }
+
+        @keyframes fadeInContent {
+            0% { opacity: 0; transform: translate(-50%, 10px); }
+            100% { opacity: 1; transform: translate(-50%, 0); }
+        }

@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  align-items: center; /* Vertically centers content */
+  gap: 20px;          /* Adds space around the divider */
+}
+
+.divider {
+  width: 1px;
+  height: 50px;       /* Set your preferred fixed height */
+  background-color: #ccc;
+  /* Alternatively, you can use: border-left: 1px solid #ccc; */
+}

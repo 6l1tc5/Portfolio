@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Room Card</title>
+
+<style>
+body{
+    background:#1a1a1a;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    font-family:Georgia, serif;
+}
+
+.room-card{
+    width:700px;
+    height:500px;
+    display:flex;
+    background:#d6c3a5;
+    border:12px solid #5a4228;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 0 25px rgba(0,0,0,.6);
+}
+
+.room{
+    flex:1;
+    padding:10px;
+    display:flex;
+    flex-direction:column;
+}
+
+.room:first-child{
+    border-right:8px solid #5a4228;
+}
+
+.room-name{
+    background:#d9cfb5;
+    border:2px solid #7a6545;
+    padding:8px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.room-image{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    margin-top:8px;
+    border:3px solid #7a6545;
+}
+
+.room-type{
+    margin-top:8px;
+    font-style:italic;
+    color:#444;
+}
+
+.room-text{
+    background:#f5eddc;
+    border:2px solid #7a6545;
+    padding:10px;
+    margin-top:8px;
+    flex-grow:1;
+}
+
+.unlock{
+    float:right;
+    background:#7a6545;
+    color:white;
+    padding:2px 8px;
+    border-radius:10px;
+    font-size:14px;
+}
+body{
+    background:#1a1a1a;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    font-family:Georgia, serif;
+}
+
+.navigation{
+    margin-top:30px;
+    margin-bottom:20px;
+    display:flex;
+    gap:20px;
+}
+
+.navigation a{
+    text-decoration:none;
+    background:#5a4228;
+    color:white;
+    padding:12px 24px;
+    border-radius:10px;
+    border:2px solid #d6c3a5;
+    transition:0.3s;
+}
+
+.navigation a:hover{
+    background:#7a6545;
+    transform:translateY(-3px);
+}
+</style>
+</head>
+<body>
+
+<div class="room-card">
+
+    <!-- LEFT ROOM -->
+    <div class="room">
+
+        <div class="room-name">
+            Students Preception On School Uniforms And Their Impact On Student Welfare
+            <span class="unlock">🔓</span>
+        </div>
+
+        <img src="res1.png" alt="Library" class="room-image">
+
+        <div class="room-type">
+            Grade 11 Research
+        </div>
+
+        <div class="room-text">
+            A research about the phycological and emotionl effects of wearing a uniform.
+        </div>
+
+    </div>
+
+    <!-- RIGHT ROOM -->
+    <div class="room">
+
+        <div class="room-name">
+            Stride To Power: Portable FootstepEnergy Harvester For Charging Devices
+            <span class="unlock">🔒</span>
+        </div>
+
+        <img src="res2.png" alt="Secret Chamber" class="room-image">
+
+        <div class="room-type">
+            Grade 12 Research
+        </div>
+
+        <div class="room-text">
+            A capstone project set on developing a portable charging device using piezoelectric devices.
+        </div>
+
+    </div>
+
+</div>
+
+
+    <!--<div class="container">
+    <img src="res1.png"  height="300" width="300">
+  <div>A research about the phycological and emotionl effects of wearing a uniform</div>
+  <div class="divider"></div>
+  <img src="res2.png" height="300" width="300">
+  <div>A capstone project set on developing a portable charging device using piezoelectric devices </div>
+</div>
+-->
+  <div class="navigation">
+    <a href="title page.html">⬅ Title Page</a>
+    <a href="Conclusion.html">Conclusion ➡</a>
+</div>
+
+</body>
+</html>
